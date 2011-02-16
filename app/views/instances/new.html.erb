@@ -1,0 +1,18 @@
+<% @page_title = "Create Instance" %>
+
+<%= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="instance new">
+    <h2>Create Instance</h2>
+    
+    <%= form_for(:instance, :url => {:action => 'create'}) do |f| %>
+    
+        <%= render(:partial => "form", :locals => {:f => f}) %>    
+        
+        <div class="form-buttons">
+            <%= submit_tag("Create Instance") %>
+        </div>
+        
+    <% end %>
+    
+</div>

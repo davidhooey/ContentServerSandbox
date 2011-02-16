@@ -1,0 +1,34 @@
+<% @page_title = "Show Instance" %>
+
+<%= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="instance show">
+    <h2>Show Instance</h2>
+    
+    <table summary="Instance detail view">
+        <tr>
+            <th>Host</th>
+            <td><%= @instance.host_name %></td>
+        </tr>
+        <tr>
+            <th>Service</th>
+            <td><%= @instance.service_name %></td>
+        </tr>
+        <tr>
+            <th>CS Version</th>
+            <td><%= @instance.cs_version %></td>
+        </tr>
+        <tr>
+            <th>RM Version</th>
+            <td><%= @instance.rm_version %></td>
+        </tr>
+        <tr>
+            <th>Created</th>
+            <td><%= @instance.created_at.strftime('%B %d, %Y %H:%M') %></td>
+        </tr>
+        <tr>
+            <th>Updated</th>
+            <td><%= @instance.updated_at.strftime('%B %d, %Y %H:%M') %></td>
+        </tr>
+    </table>
+</div>

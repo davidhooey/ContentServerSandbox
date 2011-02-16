@@ -1,0 +1,17 @@
+<% @page_title = "Edit Instance" %>
+
+<%= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="instance edit">
+    <h2>Edit Instance</h2>
+    
+    <%= form_for(:instance, :url => {:action => 'update', :id => @instance.id}) do |f| %>
+
+        <%= render(:partial => "form", :locals => {:f => f}) %>    
+        
+        <div class="form-buttons">
+            <%= submit_tag("Update Instance") %>
+        </div>
+        
+    <% end %>    
+</div>

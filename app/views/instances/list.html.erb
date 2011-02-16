@@ -1,0 +1,32 @@
+<% @page_title = "Instances" %>
+
+<%= link_to("<< Back to Menu", {:controller => 'admin'}, :class => 'back-link') %>
+
+<div class="instance list">
+    <h2>Instances</h2>
+    
+    <%= link_to("Add New Instance", {:action => 'new'}, :class => 'action new') %>
+    
+    <table class="listing" summary="Instance list">
+        <tr class="header">
+            <th>Host</th>
+            <th>Service</th>
+            <th>CSVersion</th>
+            <th>RMVersion</th>
+            <th>Actions</th>
+        </tr>
+        <% @instances.each do |instance| %>
+        <tr class="<%= cycle('odd','even')%>">
+            <td class="center"><%= instance.host_name %></td>
+            <td class="center"><%= instance.service_name %></td>
+            <td class="center"><%= instance.cs_version %></td>
+            <td class="center"><%= instance.rm_version %></td>
+            <td class="actions">
+                <%= link_to("Show", {:action => 'show', :id => instance.id}, :class => 'action show') %>
+                <%= link_to("Edit", {:action => 'edit', :id => instance.id}, :class => 'action edit') %>
+                <%= link_to("Delete", {:action => 'delete', :id => instance.id}, :class => 'action delete') %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+</div>

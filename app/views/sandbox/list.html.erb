@@ -1,0 +1,23 @@
+<% @page_title = "Instances" %>
+
+<div class="instance list">
+    
+    <table class="listing" summary="Instance list">
+        <tr class="header">
+            <th>CS</th>
+            <th>CSStatus</th>
+            <th>CSAdminStatus</th>
+            <th>CSVersion</th>
+            <th>RMVersion</th>
+        </tr>
+        <% @instances.each do |instance| %>
+        <tr class="<%= cycle('odd','even')%>">
+            <td class="center"><%= link_to(instance.service_name,'http://' + instance.host_name + '/' + instance.service_name + '/livelink.exe') %></td>
+            <td class="center"><%= service_status_tag(instance, false) %></td>
+            <td class="center"><%= service_status_tag(instance, true) %></td>
+            <td class="center"><%= instance.cs_version %></td>
+            <td class="center"><%= instance.rm_version %></td>
+        </tr>
+        <% end %>
+    </table>
+</div>

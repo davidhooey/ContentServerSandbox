@@ -1,0 +1,20 @@
+<%= error_messages_for(@instance) %>
+
+<table summary="Instance form fields">
+    <tr>
+        <th><%= f.label('host_name', 'Host') %></th>
+        <td><%= f.text_field(:host_name, :class => 'input_field') %></td>
+    </tr>
+    <tr>
+        <th><%= f.label('service_name', 'Service') %></th>
+        <td><%= f.text_field(:service_name, :class => 'input_field') %></td>
+    </tr>
+    <tr>
+        <th><%= f.label('cs_version', 'CS Version') %></th>
+        <td><%= f.text_field(:cs_version, :class => 'input_field') %></td>
+    </tr>
+    <tr>
+        <th><%= f.label('rm_version', 'RM Version') %></th>
+        <td><%= f.text_field(:rm_version, :class => 'input_field') %></td>
+    </tr>
+</table>
