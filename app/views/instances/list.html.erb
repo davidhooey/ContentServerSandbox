@@ -12,6 +12,7 @@
             <th>Host</th>
             <th>Service</th>
             <th>CSVersion</th>
+            <th>Update</th>
             <th>RMVersion</th>
             <th>Actions</th>
         </tr>
@@ -20,6 +21,7 @@
             <td class="center"><%= instance.host_name %></td>
             <td class="center"><%= instance.service_name %></td>
             <td class="center"><%= instance.cs_version %></td>
+            <td class="center"><%= instance.update_level %></td>
             <td class="center"><%= instance.rm_version %></td>
             <td class="actions">
                 <%= link_to("Show", {:action => 'show', :id => instance.id}, :class => 'action show') %>

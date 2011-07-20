@@ -8,6 +8,7 @@
             <th>CSStatus</th>
             <th>CSAdminStatus</th>
             <th>CSVersion</th>
+            <th>Update</th>
             <th>RMVersion</th>
         </tr>
         <% @instances.each do |instance| %>
@@ -16,6 +17,7 @@
             <td class="center"><%= service_status_tag(instance, false) %></td>
             <td class="center"><%= service_status_tag(instance, true) %></td>
             <td class="center"><%= instance.cs_version %></td>
+            <td class="center"><%= instance.update_level %></td>
             <td class="center"><%= instance.rm_version %></td>
         </tr>
         <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110211192415) do
+ActiveRecord::Schema.define(:version => 20110720130632) do
 
   create_table "instances", :force => true do |t|
     t.string   "host_name",    :limit => 50
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20110211192415) do
     t.string   "rm_version",   :limit => 10
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "update_level"
   end
 
   add_index "instances", ["host_name"], :name => "index_instances_on_host_name"
